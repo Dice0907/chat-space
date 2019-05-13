@@ -13,6 +13,7 @@ Things you may want to cover:
 * Deployment instructions
 * ... -->
 
+
 ### Userテーブル
 #Group_userテーブルとのアソシエーション
 has_many :groups ,through: :group_users  
