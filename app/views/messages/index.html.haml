@@ -7,59 +7,75 @@
     %meta{:content => "InjNH6ALwl/2U2o1utyX5JaUIx4YFy4WchRjaDW4ZTPOv/cbPZqnsyyB/2/uEyfXuRkqEtGCB50gee0gIyYS8Q==", :name => "csrf-token"}/
     %link{"data-turbolinks-track" => "reload", :href => "/assets/application-e66896919920db9cb5b5d601a817ab1099691bfddbbd355c65b549b11d7b1958.css", :media => "all", :rel => "stylesheet"}/
     %script{"data-turbolinks-track" => "reload", :src => "/assets/application-11431a2aeef6ab6765ca93b518c6f8650fcffef3a41e7f77cc09f002e32bfd88.js"}
-.wrapper
+    
+.notification
+  .notice
+    登録されました
+  .wrapper   
+    .side-bar
+      .header
+        %h3.header__name
+          NAME
+        %ul.header__lists
+          %li.list
+            = link_to do
+              = fa_icon 'pencil-square-o', class: 'icon'
+          %li.list
+            = link_to do
+              = fa_icon 'cog', class: 'icon'
 
-  = render 'side/side_bar'
+      .groups
+        .group
+          .group__name
+            MMMM
+          .group__message
+            まだメッセージはありません。
+        .group
+          .group__name
+            IIII
+          .group__message
+            まだメッセージはありません。
+        .group
+          .group__name
+            IIII
+          .group__message
+            まだメッセージはありません。
 
-  .chat
-    .header
-      .left-header
-        .left-header__title
-          グループ名
-        %ul.left-header__members
-          Member：
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
-      .right-header
-        .right-header__button
-          Edit
-    .messages
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            メッセージ
-    .form
-      %form
-        %input.form__message
-        .form__mask
-          %label.form__mask__image
-            = fa_icon 'picture-o', class: 'icon'
-            %input.hidden{type: 'file'}
-        %input.form__submit{type: 'submit', value: 'Send'}
+
+
+
+
+    .chat
+      .header
+        .left-header
+          .left-header__title
+            Group
+          %ul.left-header__members
+            Member：
+            %li.member
+              GBP
+            %li.member
+              NEP
+        .right-header
+          %a.right-header__button{:href => "/groups/32012/edit"} Edit
+
+
+-#       .form
+-#         %form#new_message.js-form{"accept-charset" => "UTF-8", :action => "/groups/32012/messages", :enctype => "multipart/form-data", :method => "post"}
+-#           %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+-#           %input{:name => "authenticity_token", :type => "hidden", :value => "p1F3V+4wU7VS98z8la00/30bL+oIfqkJ2M5yVqBM1iYWdrNCkKP25BiL3Z/O7Bjkp1caNFjeTGQnkvAOH65psQ=="}/
+-#           %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+-#           .form__mask
+-#             %label.form__mask__image{:for => "message_image"}
+-#               %i.fa.fa-picture-o.icon
+-#               %input#message_image.hidden.js-file{:name => "message[image]", :type => "file"}/
+-#           %input.form__submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+-# .form
+-#       %form
+-#         %input.form__message
+-#         .form__mask
+-#           %label.form__mask__image
+-#             = fa_icon 'picture-o', class: 'icon'
+-#             %input.hidden{type: 'file'}
+-#         %input.form__submit{type: 'submit', value: 'Send'}
