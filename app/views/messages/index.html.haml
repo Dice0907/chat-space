@@ -1,17 +1,8 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpace
-    %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "InjNH6ALwl/2U2o1utyX5JaUIx4YFy4WchRjaDW4ZTPOv/cbPZqnsyyB/2/uEyfXuRkqEtGCB50gee0gIyYS8Q==", :name => "csrf-token"}/
-    %link{"data-turbolinks-track" => "reload", :href => "/assets/application-e66896919920db9cb5b5d601a817ab1099691bfddbbd355c65b549b11d7b1958.css", :media => "all", :rel => "stylesheet"}/
-    %script{"data-turbolinks-track" => "reload", :src => "/assets/application-11431a2aeef6ab6765ca93b518c6f8650fcffef3a41e7f77cc09f002e32bfd88.js"}
-    
 .notification
   .notice
     登録されました
   .wrapper   
+    = render "side/side_bar"
     .side-bar
       .header
         %h3.header__name
@@ -40,10 +31,6 @@
             IIII
           .group__message
             まだメッセージはありません。
-
-
-
-
 
     .chat
       .header
