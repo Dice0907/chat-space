@@ -2,7 +2,6 @@
   .notice
     登録されました
   .wrapper   
-    = render "side/side_bar"
     .side-bar
       .header
         %h3.header__name
@@ -44,7 +43,7 @@
             %li.member
               NEP
         .right-header
-          %a.right-header__button{:href => "/groups/32012/edit"} Edit
+          = link_to 'Edit', '#'
       
       .messages
         .message
