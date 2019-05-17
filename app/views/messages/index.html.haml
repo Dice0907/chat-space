@@ -66,12 +66,12 @@
             %p.lower-message__content zncjzdslcdsc
 
       .form
-        %form#new_message.js-form{"accept-charset" => "UTF-8", :action => "/groups/32002/messages", :enctype => "multipart/form-data", :method => "post"}
-          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-          %input{:name => "authenticity_token", :type => "hidden", :value => "wIFk6nraPtICg1/nFwovd+riyWx4giSBkCsMr0h54nVnVyF13fCdajVsGwFt0d3uRbjKyMqe5SRG56LyLhXY3g=="}/
-          %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %form#new_message.js-form{action: :"/groups/32002/messages", method: :"post"}
+          %input{name: :"utf8", type: :"hidden", value: :"✓"}/
+          %input{name: :"authenticity_token", type: :"hidden", value: :"wIFk6nraPtICg1/nFwovd+riyWx4giSBkCsMr0h54nVnVyF13fCdajVsGwFt0d3uRbjKyMqe5SRG56LyLhXY3g=="}/
+          %input#message_content.form__message.js-content{name: :"message[content]", placeholder: :"type a message", type: :"text"}/
           .form__mask
-            %label.form__mask__image{:for => "message_image"}
+            %label.form__mask__image{for: :"message_image"}
               %i.fa.fa-picture-o.icon
-              %input#message_image.hidden.js-file{:name => "message[image]", :type => "file"}/
-          %input.form__submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+              %input#message_image.hidden.js-file{name: :"message[image]", type: :"file"}/
+          %input.form__submit{type: 'submit', value: 'Send'}/
