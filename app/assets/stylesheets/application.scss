@@ -13,11 +13,13 @@
  *= require_tree .
  *= require_self
  */
-
    
 @import "font-awesome";
 @import "./reset";
 @import "./chat";
-@import "./notice";
+@import "./flash";
 @import "./side";
 @import "./body";
+@import "./user";
+@import "./clearfix";
+@import "./group"
