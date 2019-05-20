@@ -46,7 +46,7 @@ has_many :comments
 |------|-------|-----|------|------|
 |name  |string |false|false |true  |
 
-### Commentテーブル
+### Messageテーブル
 belongs_to :user  
 belongs_to :group
 
