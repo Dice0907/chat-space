@@ -45,12 +45,14 @@ $(function() {
     })
   });
   var reloadMessages = function() {
-    var last_message_id = $('.message:last').data('id');
+    var message_id = $('.message:last').data('id');
     $.ajax({
       url: "./api/messages",
       type: "get",
-      dataType: 'json',
-      data: {id: last_message_id}
+      data: {
+        message: { id: message_id } 
+      },
+      dataType: 'json'
     })
     .done(function(messages) {
       var insertHTML = '';
